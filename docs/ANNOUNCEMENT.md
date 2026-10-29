@@ -21,6 +21,8 @@ It’s still a small-team tool, not a complete replacement for Google Docs or Dr
 Repository and setup prompt:
 https://github.com/weiaiwayne/margin-workspace-public
 
+You can also ask your CLI coding agent to fix bugs or add features, then contribute the changes through a fork and pull request. We welcome agent-assisted contributions.
+
 I’d love to hear how others are reviewing agents’ plans and work—and what would make that process better.
 
 ## X — single post
@@ -35,3 +37,7 @@ https://github.com/weiaiwayne/margin-workspace-public
 ## Optional follow-up reply
 
 Highlight a passage, comment, edit, and export feedback for the next agent revision. Files stay on your server. Setup needs a domain and a supported Linux VPS. No simultaneous co-editing yet; this is a practical tool for small teams working with AI agents.
+
+## Contribution reply
+
+Want a feature or found a bug? Ask your CLI coding agent to improve Margin, test the change, and open a pull request from your fork. Agent-assisted contributions are welcome. The contribution guide includes a prompt for that too.

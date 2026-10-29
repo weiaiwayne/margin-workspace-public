@@ -1,5 +1,28 @@
 # Contributing
 
+Contributions made with CLI coding agents are welcome. Ask your agent to fix a bug, improve the interface, or add a feature. You remain responsible for reviewing the change and verifying that it works.
+
+Fork this public repository, work on a branch, and ask your agent to push to your fork and open a pull request here. Direct pushes to this repository require maintainer access; contributions are reviewed before merging. Never publish your deployment configuration or users’ documents and comments.
+
+## Prompt for your coding agent
+
+```text
+Help me improve Margin Workspace:
+https://github.com/weiaiwayne/margin-workspace-public
+
+Requested change: [describe the bug or feature]
+
+Read CONTRIBUTING.md and the relevant code. Work in a development checkout
+on a feature branch, preserving my live installation and all user data.
+Implement the change, run relevant tests with disposable fixtures, and explain
+what changed and how you verified it. Review the diff for secrets and private data.
+Push the branch to my fork and open a pull request against the public repository
+with a clear description and test results. Do not deploy to my live instance
+unless I explicitly ask.
+```
+
+## Validation
+
 Run backend tests against disposable directories, never a production database:
 
 ```bash

@@ -91,6 +91,10 @@ An example prompt:
 
 > Read `plans/example.md` and `.reviews/plans/example.md.review.md`. Preserve human edits and resolved history. Check quoted passages against the current file, address open comments, and report what changed. If a file is unreadable, report its path rather than assuming it has no comments.
 
+## Improve Margin with your coding agent
+
+Found a bug or want a new feature? Ask your CLI coding agent to update Margin. Agent-assisted contributions are welcome: review and test the changes, push them to your fork, and open a pull request to this public repository. See [Contributing](CONTRIBUTING.md) for a ready-to-copy prompt. Direct pushes require maintainer access.
+
 ## Administration and development
 
 - [VPS deployment and troubleshooting](docs/VPS.md)
