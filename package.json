@@ -1,0 +1,35 @@
+{
+  "name": "margin-workspace",
+  "version": "1.2.1",
+  "description": "A private, self-hosted workspace for reviewing Markdown documents together. Browse project folders, read formatted Markdown, select passages, discuss them in threads, and export agent-readable feedback to the source project.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "esbuild frontend/editor.js --bundle --minify --outfile=static/vendor/editor.js --legal-comments=eof"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weiaiwayne/margin-workspace-public.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/weiaiwayne/margin-workspace-public/issues"
+  },
+  "homepage": "https://github.com/weiaiwayne/margin-workspace-public#readme",
+  "dependencies": {
+    "@tiptap/core": "3.32.0",
+    "@tiptap/extension-image": "3.32.0",
+    "@tiptap/extension-table": "3.32.0",
+    "@tiptap/extension-task-item": "3.32.0",
+    "@tiptap/extension-task-list": "3.32.0",
+    "@tiptap/extension-underline": "3.32.0",
+    "@tiptap/markdown": "3.32.0",
+    "@tiptap/starter-kit": "3.32.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "private": true
+}

@@ -1,0 +1,31 @@
+[Unit]
+Description=Margin administrator-only server folder provisioning
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=margin
+WorkingDirectory=/opt/margin-workspace
+ExecStart=/opt/margin-workspace/.venv/bin/python /opt/margin-workspace/workspace_broker.py --config /etc/margin/broker.json
+Restart=on-failure
+RestartSec=3
+RuntimeDirectory=margin-broker
+RuntimeDirectoryMode=0750
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectHome=false
+ReadWritePaths=/etc/margin /etc/systemd/system/margin.service.d /root /home /opt /srv /mnt /var/www
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX
+CapabilityBoundingSet=CAP_DAC_OVERRIDE CAP_FOWNER CAP_CHOWN
+
+[Install]
+WantedBy=multi-user.target

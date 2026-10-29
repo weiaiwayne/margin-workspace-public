@@ -1,0 +1,37 @@
+[Unit]
+Description=Margin collaborative Markdown review workspace
+After=network.target
+
+[Service]
+Type=simple
+User=margin
+Group=margin
+WorkingDirectory=/opt/margin-workspace
+Environment=MARGIN_CONFIG=/etc/margin/config.json
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/margin-workspace/.venv/bin/python -m gunicorn --bind 127.0.0.1:8766 --workers 2 --threads 2 --timeout 60 --error-logfile - wsgi:app
+Restart=on-failure
+RestartSec=3
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+StateDirectory=margin
+StateDirectoryMode=0700
+ReadWritePaths=/var/lib/margin
+BindPaths=/srv/margin-projects/shared:/srv/margin/projects/shared
+ReadWritePaths=/srv/margin/projects/shared
+MemoryMax=768M
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

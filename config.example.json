@@ -1,0 +1,17 @@
+{
+  "database": "margin.sqlite",
+  "public_url": "http://127.0.0.1:8765/",
+  "base_path": "/",
+  "secure_cookie": false,
+  "proxy": false,
+  "hosts": ["localhost", "127.0.0.1"],
+  "projects": {
+    "shared": {
+      "name": "Shared workspace",
+      "root": "workspace",
+      "reviews": "workspace/.reviews",
+      "writable_directory": ".",
+      "storage_limit_bytes": 1073741824
+    }
+  }
+}
